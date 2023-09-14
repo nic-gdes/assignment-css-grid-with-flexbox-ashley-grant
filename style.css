@@ -21,8 +21,13 @@ p {
     font-size: 15px;
 }
 
+.image {
+    width: 300px;
+}
 
-
+h3 {
+    display: flex;
+}
 
 
 ul.topnav {
@@ -57,25 +62,26 @@ ul.topnav li.right {float: right;}
 
 
 @media screen and (min-width: 1200px) {
-    .card {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            max-width: 1200px;
-            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-            transition: 0.3s;
-    }
+
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    grid-gap: 20px;
 }
 
 .card {
     display: grid;
-    /*grid-template: auto / 1fr 3fr;*/
-    gap: 1rem;
-    max-width: 800px;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
+    grid-template-rows: max-content 200px 1fr;
 }
-  
+
+.card img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
 .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
